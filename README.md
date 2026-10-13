@@ -2,7 +2,6 @@
 
 Research code, datasets, and saved results for measuring tokenizer segmentation
 and language-model surprisal in constructed pseudowords and real English words.
-The manuscript and all existing paper assets are excluded.
 
 ## Contents
 
@@ -22,10 +21,6 @@ python -m pip install -r requirements.txt
 python -c "import nltk; nltk.download('cmudict')"
 ```
 
-The scripts are preserved as originally used and contain the absolute project
-path `/Users/vipularawte/token_exp`. Before running on another machine, replace
-that prefix in `src/*.py` and `viz/*.py` with the absolute path to your checkout.
-Run scripts from the project root.
 
 `check_novelty.py` and `real_word_phonotactics.py` also use the macOS dictionary
 at `/usr/share/dict/words`. Supply the equivalent dictionary path if needed;
@@ -44,12 +39,3 @@ python src/aggregate_segmentation.py
 python src/surprisal_stats.py
 python src/real_word_regression.py
 ```
-
-See `REPRODUCE.md` for the remaining pipeline. Its manuscript compilation step
-does not apply to this code-only distribution. To run visualization scripts,
-create `paper/figures/` locally first; table-generation code creates
-`paper/tables/` itself. These are generated output directories, not included
-paper files.
-
-Unzip this archive and upload the extracted contents to GitHub so that the code
-and data can be browsed directly.
