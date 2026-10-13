@@ -1,0 +1,17 @@
+=== Per-model OLS: surprisal_bits_isolated ~ initial_biphone_log_freq + final_biphone_log_freq + n_phones ===
+model                         coef_initial  p_initial  coef_final   p_final
+EleutherAI/pythia-1.4b             -0.2790     0.4195     -0.5403   0.02879
+EleutherAI/pythia-160m             -0.2949     0.4572     -0.7732  0.006603
+EleutherAI/pythia-2.8b             -0.1862      0.589     -0.3596    0.1432
+EleutherAI/pythia-410m             -0.2006     0.5838     -0.6789   0.00973
+google/gemma-2-2b                   0.0116     0.9687      0.3877   0.06567
+gpt2                                0.0164     0.9595     -0.3654    0.1122
+gpt2-large                          0.0163     0.9595     -0.4383   0.05682
+gpt2-medium                        -0.1868     0.5923     -0.6089   0.01483
+meta-llama/Meta-Llama-3-8B         -0.1070     0.5673      0.2182    0.1021
+mistralai/Mistral-7B-v0.3          -0.0972     0.6363      0.2882   0.04965
+
+=== Pooled mixed model: surprisal_bits_isolated ~ initial + final + n_phones + model, random intercept per word ===
+  initial_biphone_log_freq: coef=-0.1307  se=0.2605  p=0.6158
+  final_biphone_log_freq: coef=-0.2870  se=0.1853  p=0.1214
+  n_phones: coef=1.0075  se=0.2009  p=5.297e-07

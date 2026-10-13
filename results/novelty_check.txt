@@ -1,0 +1,4 @@
+Checked 100 pseudowords against 234456-entry English dictionary (/usr/share/dict/words).
+Real-word collisions found: 0
+Duplicate pseudowords within dataset: 0 -- none
+PASS: all 100 pseudowords are non-words (no dictionary matches) and all unique.

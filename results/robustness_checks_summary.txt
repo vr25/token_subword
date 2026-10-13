@@ -1,0 +1,131 @@
+
+========== 1. FDR (Benjamini-Hochberg) correction on per-tokenizer/per-model p-values ==========
+
+Segmentation (9 tokenizers), paired t-test p-values, FDR-corrected:
+           tokenizer  paired_t_p  paired_t_p_fdr  significant_after_fdr
+       tiktoken:gpt2    0.279644        0.419467                  False
+tiktoken:cl100k_base    0.642068        0.722326                  False
+ tiktoken:o200k_base    0.000187        0.000576                   True
+hf:bert-base-uncased    0.000192        0.000576                   True
+          hf:t5-base    0.113770        0.204785                  False
+  hf:mistral-7b-v0.3    0.089686        0.201793                  False
+         hf:qwen2-7b    0.642068        0.722326                  False
+       hf:llama-3-8b    0.811147        0.811147                  False
+       hf:gemma-2-2b    0.000029        0.000262                   True
+
+Surprisal (surprisal_bits_isolated), 10 models, FDR-corrected:
+                     model   paired_t_p  paired_t_p_fdr  significant_after_fdr
+                      gpt2 1.986525e-01    1.986525e-01                  False
+               gpt2-medium 1.904765e-02    2.380956e-02                   True
+                gpt2-large 7.658815e-03    1.094116e-02                   True
+    EleutherAI/pythia-160m 2.929472e-06    1.464736e-05                   True
+    EleutherAI/pythia-410m 7.540322e-04    1.256720e-03                   True
+    EleutherAI/pythia-1.4b 1.980404e-05    6.601348e-05                   True
+    EleutherAI/pythia-2.8b 5.527244e-04    1.105449e-03                   True
+ mistralai/Mistral-7B-v0.3 5.439022e-10    5.439022e-09                   True
+         google/gemma-2-2b 3.013623e-02    3.348470e-02                   True
+meta-llama/Meta-Llama-3-8B 2.330567e-04    5.826418e-04                   True
+
+Surprisal (surprisal_bits_in_context), 10 models, FDR-corrected:
+                     model   paired_t_p  paired_t_p_fdr  significant_after_fdr
+                      gpt2 8.821151e-03        0.029404                   True
+               gpt2-medium 2.346952e-02        0.046939                   True
+                gpt2-large 5.329695e-02        0.088828                  False
+    EleutherAI/pythia-160m 1.468479e-02        0.036712                   True
+    EleutherAI/pythia-410m 8.080235e-02        0.115432                  False
+    EleutherAI/pythia-1.4b 1.765925e-01        0.196214                  False
+    EleutherAI/pythia-2.8b 1.036134e-01        0.129517                  False
+ mistralai/Mistral-7B-v0.3 9.911350e-01        0.991135                  False
+         google/gemma-2-2b 3.009970e-07        0.000003                   True
+meta-llama/Meta-Llama-3-8B 5.975144e-04        0.002988                   True
+
+========== 2. Condition x category interaction (is the effect concentrated in 1-2 of 5 categories?) ==========
+
+Segmentation: condition x category LR test: stat=33.340, df=4, p=1.018e-06
+  -> effect size DOES differ significantly across the 5 categories.
+condition                  word_final  word_initial  diff(initial-final)
+category                                                                
+complex_fricative_plosive    2.933333      3.133333             0.200000
+nasal_fricative_liquid       3.377778      3.066667            -0.311111
+stop_fricative_stop          3.300000      2.944444            -0.355556
+voiced_liquid_guttural       3.333333      3.077778            -0.255556
+voiceless_stop               3.055556      2.788889            -0.266667
+
+Surprisal (isolated): condition x category LR test: stat=37.761, df=4, p=1.255e-07
+  -> effect size DOES differ significantly across the 5 categories.
+condition                  word_final  word_initial  diff(initial-final)
+category                                                                
+complex_fricative_plosive   30.287045     29.382416            -0.904629
+nasal_fricative_liquid      31.208000     30.079219            -1.128781
+stop_fricative_stop         31.260397     29.271466            -1.988931
+voiced_liquid_guttural      32.655803     28.511029            -4.144774
+voiceless_stop              29.384748     25.720628            -3.664119
+
+Surprisal (in-context): condition x category LR test: stat=65.663, df=4, p=1.865e-13
+  -> effect size DOES differ significantly across the 5 categories.
+condition                  word_final  word_initial  diff(initial-final)
+category                                                                
+complex_fricative_plosive   29.912307     31.714383             1.802077
+nasal_fricative_liquid      34.905290     29.469594            -5.435696
+stop_fricative_stop         33.627054     28.693063            -4.933991
+voiced_liquid_guttural      34.560610     29.590500            -4.970110
+voiceless_stop              29.710541     28.913058            -0.797482
+
+========== 3. Leave-one-cluster-out robustness (primary pooled model, 15 refits) ==========
+
+Segmentation: dropping each of 15 clusters in turn, refitting 'n_tokens ~ condition + tokenizer', random=(1|cluster)+(1|pair nested):
+dropped_cluster  condition_coef    p_value
+bzv                     -0.1908  3.834e-08
+dbv                     -0.1844  1.106e-07
+fvk                     -0.1939  2.168e-08
+gzn                     -0.2126  1.158e-09
+ktp                     -0.2080  1.423e-09
+lbz                     -0.1844  8.737e-08
+mvr                     -0.1868  5.259e-08
+mzv                     -0.1739  5.316e-07
+nvz                     -0.2080  2.029e-09
+ptk                     -0.1884  6.363e-08
+pvk                     -0.1844  4.541e-08
+sfp                     -0.2585  2.662e-14
+tkp                     -0.1820   1.26e-07
+vzm                     -0.1844  1.023e-07
+zvd                     -0.2270  5.031e-11
+  -> max p-value across all 15 leave-one-out refits: 5.316e-07 (still significant everywhere)
+
+Surprisal (isolated): dropping each of 15 clusters in turn, refitting 'surprisal_bits_isolated ~ condition + model', random=(1|cluster)+(1|pair nested):
+dropped_cluster  condition_coef    p_value
+bzv                     -2.3768  5.366e-30
+dbv                     -2.4534  6.746e-33
+fvk                     -2.4252  9.608e-33
+gzn                     -2.0698  2.598e-23
+ktp                     -2.3119  1.811e-28
+lbz                     -2.3451  5.183e-29
+mvr                     -2.5374  3.352e-35
+mzv                     -2.4686  3.752e-33
+nvz                     -2.3581  3.578e-29
+ptk                     -2.3917  1.261e-29
+pvk                     -2.3491  1.512e-30
+sfp                     -2.3983   4.92e-30
+tkp                     -2.1195  1.445e-24
+vzm                     -2.2991  2.105e-28
+zvd                     -2.5869  3.655e-36
+  -> max p-value across all 15 leave-one-out refits: 2.598e-23 (still significant everywhere)
+
+Surprisal (in-context): dropping each of 15 clusters in turn, refitting 'surprisal_bits_in_context ~ condition + model', random=(1|cluster)+(1|pair nested):
+dropped_cluster  condition_coef    p_value
+bzv                     -3.0707  1.313e-17
+dbv                     -2.2640  6.187e-11
+fvk                     -3.1998  3.406e-20
+gzn                     -3.0302  6.254e-18
+ktp                     -2.9061  2.008e-16
+lbz                     -2.4364  2.814e-12
+mvr                     -2.9691  5.621e-17
+mzv                     -2.6266  1.228e-13
+nvz                     -2.4538  1.372e-12
+ptk                     -3.1839  1.681e-19
+pvk                     -2.8310  1.492e-15
+sfp                     -3.2710  3.085e-20
+tkp                     -2.9582  1.049e-16
+vzm                     -2.6905  2.993e-14
+zvd                     -3.1323  1.133e-18
+  -> max p-value across all 15 leave-one-out refits: 6.187e-11 (still significant everywhere)

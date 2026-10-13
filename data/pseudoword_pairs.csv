@@ -1,0 +1,101 @@
+pair_id,category,cluster,rime,condition,pseudoword,carrier_sentence
+1,stop_fricative_stop,bzv,im,word_initial,bzvim,The artisan crafted the raw bzvim.
+1,stop_fricative_stop,bzv,im,word_final,imbzv,The artisan crafted the raw imbzv.
+2,stop_fricative_stop,pvk,on,word_initial,pvkon,The chef prepared a rare pvkon.
+2,stop_fricative_stop,pvk,on,word_final,onpvk,The chef prepared a rare onpvk.
+3,stop_fricative_stop,dbv,ax,word_initial,dbvax,He dropped the heavy dbvax.
+3,stop_fricative_stop,dbv,ax,word_final,axdbv,He dropped the heavy axdbv.
+4,stop_fricative_stop,bzv,ek,word_initial,bzvek,The child pointed at the bzvek.
+4,stop_fricative_stop,bzv,ek,word_final,ekbzv,The child pointed at the ekbzv.
+5,stop_fricative_stop,pvk,is,word_initial,pvkis,They painted the old pvkis.
+5,stop_fricative_stop,pvk,is,word_final,ispvk,They painted the old ispvk.
+6,stop_fricative_stop,dbv,om,word_initial,dbvom,She stepped over the dbvom.
+6,stop_fricative_stop,dbv,om,word_final,omdbv,She stepped over the omdbv.
+7,stop_fricative_stop,bzv,un,word_initial,bzvun,We noticed a sudden bzvun.
+7,stop_fricative_stop,bzv,un,word_final,unbzv,We noticed a sudden unbzv.
+8,stop_fricative_stop,pvk,et,word_initial,pvket,The machine produced a pvket.
+8,stop_fricative_stop,pvk,et,word_final,etpvk,The machine produced a etpvk.
+9,stop_fricative_stop,dbv,il,word_initial,dbvil,The storm destroyed the dbvil.
+9,stop_fricative_stop,dbv,il,word_final,ildbv,The storm destroyed the ildbv.
+10,stop_fricative_stop,bzv,og,word_initial,bzvog,He found a broken bzvog.
+10,stop_fricative_stop,bzv,og,word_final,ogbzv,He found a broken ogbzv.
+11,nasal_fricative_liquid,mzv,al,word_initial,mzval,The uniform was a bright mzval.
+11,nasal_fricative_liquid,mzv,al,word_final,almzv,The uniform was a bright almzv.
+12,nasal_fricative_liquid,nvz,it,word_initial,nvzit,The guide pointed out the nvzit.
+12,nasal_fricative_liquid,nvz,it,word_final,itnvz,The guide pointed out the itnvz.
+13,nasal_fricative_liquid,mvr,ux,word_initial,mvrux,She cleaned the dusty mvrux.
+13,nasal_fricative_liquid,mvr,ux,word_final,uxmvr,She cleaned the dusty uxmvr.
+14,nasal_fricative_liquid,mzv,en,word_initial,mzven,They discovered a deep mzven.
+14,nasal_fricative_liquid,mzv,en,word_final,enmzv,They discovered a deep enmzv.
+15,nasal_fricative_liquid,nvz,op,word_initial,nvzop,The liquid filled the nvzop.
+15,nasal_fricative_liquid,nvz,op,word_final,opnvz,The liquid filled the opnvz.
+16,nasal_fricative_liquid,mvr,ig,word_initial,mvrig,He carried the fragile mvrig.
+16,nasal_fricative_liquid,mvr,ig,word_final,igmvr,He carried the fragile igmvr.
+17,nasal_fricative_liquid,mzv,od,word_initial,mzvod,We looked at the ancient mzvod.
+17,nasal_fricative_liquid,mzv,od,word_final,odmzv,We looked at the ancient odmzv.
+18,nasal_fricative_liquid,nvz,um,word_initial,nvzum,The doctor examined the nvzum.
+18,nasal_fricative_liquid,nvz,um,word_final,umnvz,The doctor examined the umnvz.
+19,nasal_fricative_liquid,mvr,af,word_initial,mvraf,The map showed a tiny mvraf.
+19,nasal_fricative_liquid,mvr,af,word_final,afmvr,The map showed a tiny afmvr.
+20,nasal_fricative_liquid,mzv,yk,word_initial,mzvyk,She wore a beautiful mzvyk.
+20,nasal_fricative_liquid,mzv,yk,word_final,ykmzv,She wore a beautiful ykmzv.
+21,voiceless_stop,ptk,am,word_initial,ptkam,He tripped over a loose ptkam.
+21,voiceless_stop,ptk,am,word_final,amptk,He tripped over a loose amptk.
+22,voiceless_stop,ktp,in,word_initial,ktpin,The box contained a heavy ktpin.
+22,voiceless_stop,ktp,in,word_final,inktp,The box contained a heavy inktp.
+23,voiceless_stop,tkp,os,word_initial,tkpos,The hunter tracked the tkpos.
+23,voiceless_stop,tkp,os,word_final,ostkp,The hunter tracked the ostkp.
+24,voiceless_stop,ptk,ed,word_initial,ptked,The document was a brief ptked.
+24,voiceless_stop,ptk,ed,word_final,edptk,The document was a brief edptk.
+25,voiceless_stop,ktp,ug,word_initial,ktpug,She drank from the clean ktpug.
+25,voiceless_stop,ktp,ug,word_final,ugktp,She drank from the clean ugktp.
+26,voiceless_stop,tkp,en,word_initial,tkpen,They threw away the old tkpen.
+26,voiceless_stop,tkp,en,word_final,entkp,They threw away the old entkp.
+27,voiceless_stop,ptk,if,word_initial,ptkif,The surface was a smooth ptkif.
+27,voiceless_stop,ptk,if,word_final,ifptk,The surface was a smooth ifptk.
+28,voiceless_stop,ktp,ol,word_initial,ktpol,He looked through the ktpol.
+28,voiceless_stop,ktp,ol,word_final,olktp,He looked through the olktp.
+29,voiceless_stop,tkp,ub,word_initial,tkpub,The sound came from the tkpub.
+29,voiceless_stop,tkp,ub,word_final,ubtkp,The sound came from the ubtkp.
+30,voiceless_stop,ptk,ax,word_initial,ptkax,She mended the torn ptkax.
+30,voiceless_stop,ptk,ax,word_final,axptk,She mended the torn axptk.
+31,voiced_liquid_guttural,gzn,if,word_initial,gznif,The label read as gznif.
+31,voiced_liquid_guttural,gzn,if,word_final,ifgzn,The label read as ifgzn.
+32,voiced_liquid_guttural,vzm,ok,word_initial,vzmok,The texture felt like vzmok.
+32,voiced_liquid_guttural,vzm,ok,word_final,okvzm,The texture felt like okvzm.
+33,voiced_liquid_guttural,lbz,at,word_initial,lbzat,The creature made a lbzat.
+33,voiced_liquid_guttural,lbz,at,word_final,atlbz,The creature made a atlbz.
+34,voiced_liquid_guttural,gzn,ep,word_initial,gznep,The artist drew a simple gznep.
+34,voiced_liquid_guttural,gzn,ep,word_final,epgzn,The artist drew a simple epgzn.
+35,voiced_liquid_guttural,vzm,id,word_initial,vzmid,He stepped onto the vzmid.
+35,voiced_liquid_guttural,vzm,id,word_final,idvzm,He stepped onto the idvzm.
+36,voiced_liquid_guttural,lbz,un,word_initial,lbzun,The container held the lbzun.
+36,voiced_liquid_guttural,lbz,un,word_final,unlbz,The container held the unlbz.
+37,voiced_liquid_guttural,gzn,ov,word_initial,gznov,We entered a quiet gznov.
+37,voiced_liquid_guttural,gzn,ov,word_final,ovgzn,We entered a quiet ovgzn.
+38,voiced_liquid_guttural,vzm,ag,word_initial,vzmag,The recipe required a vzmag.
+38,voiced_liquid_guttural,vzm,ag,word_final,agvzm,The recipe required a agvzm.
+39,voiced_liquid_guttural,lbz,ek,word_initial,lbzek,She found a shiny lbzek.
+39,voiced_liquid_guttural,lbz,ek,word_final,eklbz,She found a shiny eklbz.
+40,voiced_liquid_guttural,gzn,ul,word_initial,gznul,The signal showed a gznul.
+40,voiced_liquid_guttural,gzn,ul,word_final,ulgzn,The signal showed a ulgzn.
+41,complex_fricative_plosive,sfp,om,word_initial,sfpom,The worker fixed the sfpom.
+41,complex_fricative_plosive,sfp,om,word_final,omsfp,The worker fixed the omsfp.
+42,complex_fricative_plosive,zvd,it,word_initial,zvdit,The device gave a loud zvdit.
+42,complex_fricative_plosive,zvd,it,word_final,itzvd,The device gave a loud itzvd.
+43,complex_fricative_plosive,fvk,un,word_initial,fvkun,They harvested the ripe fvkun.
+43,complex_fricative_plosive,fvk,un,word_final,unfvk,They harvested the ripe unfvk.
+44,complex_fricative_plosive,sfp,ex,word_initial,sfpex,The mirror reflected a sfpex.
+44,complex_fricative_plosive,sfp,ex,word_final,exsfp,The mirror reflected a exsfp.
+45,complex_fricative_plosive,zvd,ag,word_initial,zvdag,The driver turned the zvdag.
+45,complex_fricative_plosive,zvd,ag,word_final,agzvd,The driver turned the agzvd.
+46,complex_fricative_plosive,fvk,is,word_initial,fvkis,He cleaned out the wet fvkis.
+46,complex_fricative_plosive,fvk,is,word_final,isfvk,He cleaned out the wet isfvk.
+47,complex_fricative_plosive,sfp,ob,word_initial,sfpob,The report outlined the sfpob.
+47,complex_fricative_plosive,sfp,ob,word_final,obsfp,The report outlined the obsfp.
+48,complex_fricative_plosive,zvd,um,word_initial,zvdum,She sat near the warm zvdum.
+48,complex_fricative_plosive,zvd,um,word_final,umzvd,She sat near the warm umzvd.
+49,complex_fricative_plosive,fvk,en,word_initial,fvken,They reached a rocky fvken.
+49,complex_fricative_plosive,fvk,en,word_final,enfvk,They reached a rocky enfvk.
+50,complex_fricative_plosive,sfp,il,word_initial,sfpil,The pattern displayed a sfpil.
+50,complex_fricative_plosive,sfp,il,word_final,ilsfp,The pattern displayed a ilsfp.

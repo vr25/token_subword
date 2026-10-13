@@ -1,0 +1,55 @@
+
+=== Interaction test: Segmentation: condition x tokenizer ===
+null:  n_tokens ~ condition + tokenizer
+full:  n_tokens ~ condition * tokenizer
+LR statistic = 24.855, df = 8, p = 0.001645
+  -> effect size DOES differ significantly across groups (heterogeneous).
+  per-group interaction coefficients (relative to reference group):
+    tokenizer[T.hf:gemma-2-2b]: coef=-0.8600  p=1.85e-18
+    tokenizer[T.hf:llama-3-8b]: coef=-0.8600  p=1.85e-18
+    tokenizer[T.hf:mistral-7b-v0.3]: coef=-0.2800  p=0.004316
+    tokenizer[T.hf:qwen2-7b]: coef=-0.7600  p=9.428e-15
+    tokenizer[T.hf:t5-base]: coef=1.4000  p=3.35e-46
+    tokenizer[T.tiktoken:cl100k_base]: coef=-0.7600  p=9.428e-15
+    tokenizer[T.tiktoken:gpt2]: coef=-0.4800  p=9.947e-07
+    tokenizer[T.tiktoken:o200k_base]: coef=-0.8200  p=6.361e-17
+    condition[T.word_initial]:tokenizer[T.hf:gemma-2-2b]: coef=-0.0800  p=0.5642
+    condition[T.word_initial]:tokenizer[T.hf:llama-3-8b]: coef=0.3800  p=0.006165
+    condition[T.word_initial]:tokenizer[T.hf:mistral-7b-v0.3]: coef=0.2200  p=0.1128
+    condition[T.word_initial]:tokenizer[T.hf:qwen2-7b]: coef=0.3200  p=0.02109
+    condition[T.word_initial]:tokenizer[T.hf:t5-base]: coef=0.0800  p=0.5642
+    condition[T.word_initial]:tokenizer[T.tiktoken:cl100k_base]: coef=0.3200  p=0.02109
+    condition[T.word_initial]:tokenizer[T.tiktoken:gpt2]: coef=0.2600  p=0.06093
+    condition[T.word_initial]:tokenizer[T.tiktoken:o200k_base]: coef=-0.0400  p=0.7731
+
+=== Interaction test: Surprisal isolated: condition x model ===
+null:  surprisal_bits_isolated ~ condition + model
+full:  surprisal_bits_isolated ~ condition * model
+LR statistic = 12.754, df = 9, p = 0.1741
+  -> no significant evidence the effect size differs across groups (data consistent with a uniform effect).
+  per-group interaction coefficients (relative to reference group):
+    condition[T.word_initial]:model[T.EleutherAI/pythia-160m]: coef=0.2481  p=0.7796
+    condition[T.word_initial]:model[T.EleutherAI/pythia-2.8b]: coef=0.9940  p=0.2622
+    condition[T.word_initial]:model[T.EleutherAI/pythia-410m]: coef=0.9788  p=0.2695
+    condition[T.word_initial]:model[T.google/gemma-2-2b]: coef=1.1341  p=0.2008
+    condition[T.word_initial]:model[T.gpt2]: coef=2.4787  p=0.005169
+    condition[T.word_initial]:model[T.gpt2-large]: coef=1.3695  p=0.1224
+    condition[T.word_initial]:model[T.gpt2-medium]: coef=1.7540  p=0.04785
+    condition[T.word_initial]:model[T.meta-llama/Meta-Llama-3-8B]: coef=1.5617  p=0.07811
+    condition[T.word_initial]:model[T.mistralai/Mistral-7B-v0.3]: coef=0.4161  p=0.6387
+
+=== Interaction test: Surprisal in-context: condition x model ===
+null:  surprisal_bits_in_context ~ condition + model
+full:  surprisal_bits_in_context ~ condition * model
+LR statistic = 37.193, df = 9, p = 2.431e-05
+  -> effect size DOES differ significantly across groups (heterogeneous).
+  per-group interaction coefficients (relative to reference group):
+    condition[T.word_initial]:model[T.EleutherAI/pythia-160m]: coef=-1.1139  p=0.4538
+    condition[T.word_initial]:model[T.EleutherAI/pythia-2.8b]: coef=-0.3771  p=0.7998
+    condition[T.word_initial]:model[T.EleutherAI/pythia-410m]: coef=-0.5969  p=0.6881
+    condition[T.word_initial]:model[T.google/gemma-2-2b]: coef=-6.4513  p=1.433e-05
+    condition[T.word_initial]:model[T.gpt2]: coef=-1.5016  p=0.3126
+    condition[T.word_initial]:model[T.gpt2-large]: coef=-0.2506  p=0.8662
+    condition[T.word_initial]:model[T.gpt2-medium]: coef=-0.8511  p=0.5671
+    condition[T.word_initial]:model[T.meta-llama/Meta-Llama-3-8B]: coef=-2.8282  p=0.05716
+    condition[T.word_initial]:model[T.mistralai/Mistral-7B-v0.3]: coef=1.6481  p=0.2677

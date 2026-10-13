@@ -1,0 +1,21 @@
+
+=== Segmentation: n_tokens ~ condition + tokenizer ===
+formula: n_tokens ~ condition + tokenizer  |  random: (1|cluster) + (1|pair_id nested in cluster)
+n_obs=900
+  condition[T.word_initial]: coef=-0.1978  se=0.0334  p=3.058e-09
+  (interpretation: coef is the fixed effect of being word_initial vs word_final,
+   holding tokenizer/model fixed, after accounting for cluster/pair random effects)
+
+=== Surprisal (isolated word) ===
+formula: surprisal_bits_isolated ~ condition + model  |  random: (1|cluster) + (1|pair_id nested in cluster)
+n_obs=1000
+  condition[T.word_initial]: coef=-2.3662  se=0.2006  p=4.114e-32
+  (interpretation: coef is the fixed effect of being word_initial vs word_final,
+   holding tokenizer/model fixed, after accounting for cluster/pair random effects)
+
+=== Surprisal (in sentence context) ===
+formula: surprisal_bits_in_context ~ condition + model  |  random: (1|cluster) + (1|pair_id nested in cluster)
+n_obs=1000
+  condition[T.word_initial]: coef=-2.8670  se=0.3409  p=4.055e-17
+  (interpretation: coef is the fixed effect of being word_initial vs word_final,
+   holding tokenizer/model fixed, after accounting for cluster/pair random effects)
